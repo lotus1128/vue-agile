@@ -218,7 +218,11 @@
 			},
 
 			disableScroll () {
-				document.ontouchmove = (e) => e.preventDefault()
+				document.ontouchmove = function(e) {
+					if (!e.touches) {
+						e.preventDefault();
+					}
+				};
 			},
 
 			enableScroll () {
