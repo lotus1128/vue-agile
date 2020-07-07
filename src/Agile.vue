@@ -18,7 +18,7 @@
 
 		<div class="agile__actions" v-if="!settings.unagile && (settings.navButtons || settings.dots)">
 			<button v-if="settings.navButtons && !settings.unagile" class="agile__nav-button agile__nav-button--prev" :disabled="!canGoToPrev" @click="goToPrev(), restartAutoPlay()" type="button" ref="prevButton">
-				<slot name="prevButton">←</slot>
+				<slot name="prevButton">↝</slot>
 			</button>
 
 			<ul ref="dots" v-if="settings.dots && !settings.unagile" class="agile__dots">
@@ -318,9 +318,9 @@
 		flex-direction: row-reverse;
 	}
 
-	.agile:focus, .agile:active, .agile *:focus, .agile *:active {
+	/* .agile:focus, .agile:active, .agile *:focus, .agile *:active {
 		outline: none;
-	}
+	} */
 
 	.agile__list {
 		display: block;
